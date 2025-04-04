@@ -1,0 +1,37 @@
+h1#top {
+  padding-top: 75px;
+  padding-bottom: 20px;
+}
+
+#list {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 2em;
+  padding-left: 0px;
+  padding-bottom: 100px;
+  background: transparent;
+  filter: drop-shadow(0 0 10px white);
+}
+
+#top {
+  color: white;
+  font-weight: 400;
+  font-style: normal;
+  text-align: center;
+  font-size: medium;
+}
+
+@media screen and (min-width: 768px) {
+  #list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-bottom: 40px;
+  }
+
+  #top {
+    font-size: 25px;
+  }
+}

@@ -1,0 +1,163 @@
+#profil-title {
+  text-align: center;
+  padding-bottom: 20px;
+  padding-top: 60px;
+  color: white;
+  font-size: 15px;
+}
+
+h2#user-form-title {
+  color: white;
+  font-size: 15px;
+  margin-top: 60px;
+}
+
+.img-user {
+  padding-bottom: 30px;
+  color: white;
+}
+
+input#new-image {
+  font-size: 8px;
+}
+
+img#img-avatar {
+  width: 30%;
+  border-radius: 100em;
+  margin-bottom: 30px;
+  margin-top: 20px;
+  border: solid #fd20a7;
+}
+
+#user-card {
+  border: 5px solid #fd20a7;
+  border-radius: 1em;
+  align-items: center;
+  margin-left: 50px;
+  margin-right: 50px;
+  display: flex;
+  flex-direction: column-reverse;
+  overflow: hidden;
+}
+
+#ul-card,
+#ul-card li {
+  list-style-type: none;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.button-modif {
+  margin-top: 30px;
+  margin-bottom: 20px;
+  font-size: 10px;
+  height: auto;
+  position: relative;
+  display: none;
+  text-transform: uppercase;
+  cursor: pointer;
+  padding: 10px 10px;
+  background: #e7d454;
+  width: auto;
+  z-index: 2;
+  display: none;
+  color: black;
+}
+
+.button-modif:active {
+  top: 2px;
+}
+
+.button-modif::before {
+  content: "";
+  display: none;
+  position: absolute;
+  top: 10px;
+  bottom: 10px;
+  left: -10px;
+  right: -10px;
+  background: #e7d454;
+  z-index: -1;
+}
+
+.button-modif::after {
+  content: "";
+  display: none;
+  position: absolute;
+  top: 4px;
+  bottom: 4px;
+  left: -6px;
+  right: -6px;
+  background: #fcae34;
+  z-index: -1;
+}
+
+#password-help,
+#confirm-password-help {
+  color: white;
+  font-size: 12px;
+}
+
+ul {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+@media screen and (min-width: 768px) {
+  #user-card {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 70%;
+  }
+
+  img#img-avatar {
+    margin: 30px;
+    width: 60%;
+  }
+
+  .ul-card {
+    font-size: 15px;
+    text-align: left;
+    padding-left: 20px;
+  }
+
+  #UserPage {
+    padding-bottom: 130px;
+  }
+
+  #profil-title {
+    font-size: 25px;
+  }
+
+  #UserPage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  #ul-card {
+    font-size: 23px;
+  }
+
+  h2#profil-title {
+    padding-top: 90px;
+  }
+
+  input#new-image {
+    font-size: 13px;
+  }
+
+  h2#user-form-title {
+    color: white;
+    font-size: 25px;
+    margin-top: 85px;
+  }
+}

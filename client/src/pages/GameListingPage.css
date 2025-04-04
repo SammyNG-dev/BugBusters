@@ -1,0 +1,227 @@
+#title-list-game {
+  color: white;
+  font-weight: 400;
+  font-style: normal;
+  text-align: center;
+  font-size: 15px;
+  padding-top: 75px;
+  padding-bottom: 40px;
+}
+
+.carousel-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  perspective: 1000px;
+  position: relative;
+  width: 100%;
+  height: 949px;
+  overflow: hidden;
+  flex-direction: column;
+}
+
+.carousel {
+  position: relative;
+  width: 100%;
+  height: 730px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  position: absolute;
+  width: 250px;
+  height: 415px;
+  background-color: #320f52;
+  border: solid #fd20a7 5px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.5s, opacity 0.5s, box-shadow 0.3s ease-in-out;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-bottom: 60px;
+  overflow: hidden;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.card h2,
+.card p {
+  margin: 0;
+  padding: 0.5rem 0;
+  color: white;
+  font-size: 7px;
+}
+
+.card.active {
+  transform: translateY(0) scale(1.1);
+  z-index: 10;
+}
+
+.card.left {
+  transform: translateY(-220px) scale(0.8);
+  opacity: 0.5;
+  z-index: 5;
+}
+
+.card.right {
+  transform: translateY(220px) scale(0.8);
+  opacity: 0.5;
+  z-index: 5;
+}
+
+.card.hidden {
+  display: none;
+}
+
+.addition-game {
+  font-size: 10px;
+  color: black;
+  height: auto;
+  margin: 10px;
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-weight: 400;
+  font-style: normal;
+  text-align: center;
+  padding: 10px 10px;
+  background: #e7d454;
+  width: auto;
+  z-index: 2;
+  text-decoration: none;
+  margin-bottom: 70px;
+}
+
+.addition-game:active {
+  top: 2px;
+}
+
+.addition-game::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 10px;
+  bottom: 10px;
+  left: -10px;
+  right: -10px;
+  background: #e7d454;
+  z-index: -1;
+}
+
+.addition-game::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 4px;
+  bottom: 4px;
+  left: -6px;
+  right: -6px;
+  background: #fcae34;
+  z-index: -1;
+}
+
+#unauthorized {
+  color: white;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+div#unauthorized {
+  padding-top: 160px;
+  padding-bottom: 232px;
+}
+
+#img-unauthorized {
+  width: 50%;
+}
+
+label[for="game-title"] {
+  margin-top: 100px;
+}
+
+#game-image {
+  color: white;
+  font-size: 10px;
+}
+
+@media screen and (min-width: 768px) {
+  #title-list-game {
+    font-size: 25px;
+  }
+
+  .carousel-container {
+    height: 778px;
+    top: 60px;
+  }
+
+  .carousel {
+    width: 800px;
+    height: 78%;
+  }
+
+  .card {
+    width: 360px;
+    height: 547px;
+  }
+
+  .card img {
+    width: 80%;
+  }
+
+  .card h2,
+  .card p {
+    font-size: 11px;
+  }
+
+  .card.active {
+    transform: translateX(0) scale(1.1);
+    z-index: 10;
+  }
+
+  .card.left {
+    transform: translateX(-250px) scale(0.8);
+    opacity: 0.5;
+    z-index: 5;
+  }
+
+  .card.right {
+    transform: translateX(250px) scale(0.8);
+    opacity: 0.5;
+    z-index: 5;
+  }
+
+  .card.behind {
+    transform: translateZ(-300px) scale(0.7);
+    opacity: 0.3;
+    z-index: 1;
+  }
+
+  .addition-game {
+    font-size: 15px;
+  }
+
+  div#unauthorized {
+    padding-top: 81px;
+    padding-bottom: 56px;
+  }
+
+  #img-unauthorized {
+    width: 30%;
+  }
+}

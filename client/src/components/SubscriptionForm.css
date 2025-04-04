@@ -1,0 +1,110 @@
+#subscription-fieldset {
+  border: none;
+  color: white;
+  font-size: 10px;
+}
+
+#title-subs {
+  text-align: center;
+  margin-top: 75px;
+  padding-bottom: 30px;
+}
+
+h1#subs {
+  font-size: 25px;
+  padding-top: 100px;
+}
+
+.subscription-field {
+  width: 200px;
+  border-radius: 5px;
+  padding: 0.4em;
+}
+
+#subscription-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+#pixel-subs {
+  font-size: 25px;
+  color: black;
+  height: auto;
+  margin: 10px;
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  text-transform: uppercase;
+  cursor: pointer;
+  padding: 10px 10px;
+  background: #e7d454;
+  width: auto;
+  z-index: 2;
+}
+
+#pixel-subs:active {
+  top: 2px;
+}
+
+#pixel-subs::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 10px;
+  bottom: 10px;
+  left: -10px;
+  right: -10px;
+  background: #e7d454;
+  z-index: -1;
+}
+
+#pixel-subs::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 4px;
+  bottom: 4px;
+  left: -6px;
+  right: -6px;
+  background: #fcae34;
+  z-index: -1;
+}
+
+.checkbox {
+  height: 20px;
+  margin-top: 20px;
+}
+
+.general-conditions {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.general-conditions a {
+  color: white;
+}
+
+button#pixel-subs {
+  font-size: 10px;
+}
+
+@media screen and (min-width: 768px) {
+  .subscription-field {
+    width: 400px;
+  }
+
+  #pixel-subs {
+    font-size: 20px;
+  }
+
+  #subscription-form {
+    font-size: 20px;
+  }
+
+  button#pixel-subs {
+    font-size: 15px;
+  }
+}

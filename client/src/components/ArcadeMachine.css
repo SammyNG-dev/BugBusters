@@ -1,0 +1,284 @@
+arcade-machine {
+  display: none;
+}
+
+div.screen {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  @import url("https://fonts.googleapis.com/css?family=Orbitron|Quicksand:500");
+
+  div.screen {
+    display: block;
+  }
+
+  .arcade-machine {
+    height: 600px;
+    width: 300px;
+    position: relative;
+    margin: auto;
+    perspective: 35em;
+    margin-top: 20px;
+  }
+
+  .arcade-machine .top {
+    height: 15%;
+    width: 203%;
+    position: absolute;
+    top: -46px;
+    left: -50%;
+    background: linear-gradient(#320f52, #fd20a7);
+    border: 5px solid #000000;
+    z-index: 3;
+  }
+
+  .arcade-machine .top:before,
+  .arcade-machine .top:after {
+    height: 100%;
+    width: 4%;
+    position: absolute;
+    top: -5%;
+    background: #fd20a7;
+    border: 5px solid #000000;
+    content: " ";
+    background: linear-gradient(
+      270deg,
+      red,
+      orange,
+      yellow,
+      green,
+      cyan,
+      blue,
+      indigo,
+      violet,
+      pink,
+      magenta,
+      red
+    );
+    background-size: 1600% 1600%;
+    animation: fullRainbowLighting 5s ease infinite;
+  }
+
+  @keyframes fullRainbowLighting {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  .arcade-machine .top:before {
+    left: -6%;
+  }
+
+  .arcade-machine .top:after {
+    right: -6%;
+  }
+
+  .arcade-machine .screen-container {
+    height: 83%;
+    width: 175%;
+    position: absolute;
+    top: -3%;
+    left: -35.5%;
+    background-color: #202020;
+    border: 5px solid #000000;
+    z-index: 1;
+  }
+
+  .arcade-machine .screen-container:before,
+  .arcade-machine .screen-container:after {
+    height: 100%;
+    width: 4%;
+    position: absolute;
+    top: -1%;
+    background: linear-gradient(#fd20a7, #320f52);
+    content: " ";
+    border: 5px solid #000000;
+    z-index: 2;
+  }
+
+  .arcade-machine .screen-container:before {
+    left: -6%;
+  }
+
+  .arcade-machine .screen-container:after {
+    right: -6%;
+  }
+
+  .arcade-machine .screen-container .screen {
+    height: 90%;
+    width: 68%;
+    position: absolute;
+    top: 8%;
+    left: 15.5%;
+    background: black;
+    border: 5px solid #000000;
+    border-radius: 90px 93px 93px 93px / 15px 15px 15px 15px;
+    overflow: hidden;
+    text-align: center;
+  }
+
+  .arcade-machine .screen-container .screen h2 {
+    position: absolute;
+    top: 60%;
+    color: #e0e0e0;
+    font-family: "Orbitron", sans-serif;
+  }
+
+  .arcade-machine .screen-container .joystick {
+    height: 60px;
+    width: 60px;
+    background: #373636;
+    position: fixed;
+    top: 73%;
+    left: -19%;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    border: 5px solid #292727;
+    z-index: 3;
+    rotate: 180deg;
+  }
+
+  .arcade-machine .screen-container .joystick:before {
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    content: "";
+    border-radius: 50%;
+  }
+
+  .arcade-machine .screen-container .joystick .stick {
+    height: 40px;
+    width: 10px;
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    background: #000000;
+    transform: translateX(-50%);
+    content: "";
+  }
+
+  .arcade-machine .screen-container .joystick .stick:before {
+    height: 40px;
+    width: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background: #000000;
+    content: "";
+    transform: translateX(-50%) rotate(90deg);
+  }
+
+  .arcade-machine .board {
+    height: 46%;
+    width: 107%;
+    position: absolute;
+    top: 85.8%;
+    left: -3.4%;
+    background: #202020;
+    transform: rotateX(70deg);
+  }
+
+  .arcade-machine .board:before,
+  .arcade-machine .board:after {
+    height: 92%;
+    width: 4%;
+    position: absolute;
+    top: -2%;
+    background: linear-gradient(#320f52, #fd20a7);
+    content: " ";
+    border: 5px solid #000000;
+    z-index: 2;
+  }
+
+  .arcade-machine .board:before {
+    left: -4%;
+    rotate: 5deg;
+  }
+
+  .arcade-machine .board:after {
+    right: -4%;
+    rotate: -5deg;
+  }
+
+  .arcade-machine .board .button {
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    top: 40%;
+    left: 30%;
+    border-radius: 50%;
+    border: 5px solid #000000;
+  }
+
+  .arcade-machine .board .button-a {
+    background: #f2e30c;
+    left: 69%;
+    top: 59px;
+  }
+
+  .arcade-machine .board .button-b {
+    background: #f2e30c;
+    left: 78%;
+    top: 43px;
+  }
+
+  .arcade-machine .board .button-c {
+    background: #f2e30c;
+    left: 87%;
+    top: 43px;
+  }
+  .arcade-machine .board .button-e {
+    background: #f2e30c;
+    left: 70%;
+    top: 119px;
+  }
+  .arcade-machine .board .button-f {
+    background: #f2e30c;
+    left: 79%;
+    top: 101px;
+  }
+  .arcade-machine .board .button-g {
+    background: #f2e30c;
+    left: 88%;
+    top: 98px;
+  }
+
+  .arcade-machine .bottom {
+    height: 17%;
+    width: 108.5%;
+    position: absolute;
+    top: 115%;
+    left: -4.1%;
+    background: #fd20a7;
+    border: 5px solid #000000;
+  }
+
+  .arcade-machine .bottom:before,
+  .arcade-machine .bottom:after {
+    height: 98%;
+    width: 4%;
+    position: absolute;
+    top: -4%;
+    background: #fd20a7;
+    content: " ";
+    border: 5px solid #000000;
+    z-index: 2;
+  }
+
+  .arcade-machine .bottom:before {
+    left: -5.8%;
+  }
+
+  .arcade-machine .bottom:after {
+    right: -5.6%;
+  }
+}

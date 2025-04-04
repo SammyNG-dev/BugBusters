@@ -1,0 +1,13 @@
+.footer-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 140px;
+  background: linear-gradient(#320f52, #fd20a7);
+}
+
+#title-footer {
+  padding-top: 30px;
+  background: transparent;
+  text-shadow: 0 0 10px white;
+}

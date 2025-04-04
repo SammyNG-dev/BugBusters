@@ -1,0 +1,50 @@
+#ranking {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  padding: 50px;
+  list-style: none;
+  color: white;
+  font-size: 10px;
+}
+
+#title-rank {
+  color: white;
+  font-size: 15px;
+  text-align: center;
+  padding-top: 60px;
+}
+
+.rank {
+  border: 5px solid #fd20a7;
+  padding: 8px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+ul#ranking {
+  padding-bottom: 110px;
+}
+
+@media screen and (min-width: 768px) {
+  #ranking {
+    font-size: 18px;
+    width: 1000px;
+    margin: 0 auto;
+  }
+
+  .rank {
+    padding: 12px;
+  }
+
+  #title-rank {
+    font-size: 25px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  #title-rank {
+    padding-top: 85px;
+  }
+}

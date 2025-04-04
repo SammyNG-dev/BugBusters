@@ -1,0 +1,36 @@
+.no-content {
+  height: calc(100vh - 140px - 140px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.game-card-container {
+  height: calc(100vh - 100px - 100px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.game-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  width: 75%;
+  line-height: 20px;
+  padding-top: 80px;
+}
+
+.favorite-game-img {
+  height: 40%;
+}
+
+@media screen and (min-width: 520px) {
+  .favorite-game-img {
+    height: 150px;
+  }
+}
