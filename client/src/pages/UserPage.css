@@ -58,14 +58,12 @@ img#img-avatar {
   font-size: 10px;
   height: auto;
   position: relative;
-  display: none;
   text-transform: uppercase;
   cursor: pointer;
   padding: 10px 10px;
   background: #e7d454;
   width: auto;
   z-index: 2;
-  display: none;
   color: black;
 }
 

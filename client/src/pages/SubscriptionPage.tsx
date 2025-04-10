@@ -25,6 +25,7 @@ function SubscriptionPage() {
         })
           .then((res) => {
             if (res.status === 201) {
+              navigate("/");
               return res.json();
             }
             return res.json;
@@ -32,8 +33,10 @@ function SubscriptionPage() {
           .then((data) => {
             if (data.message) {
               alert(data.message);
-              navigate("/");
             }
+          })
+          .catch((err) => {
+            throw new Error(err);
           })
       }
     >

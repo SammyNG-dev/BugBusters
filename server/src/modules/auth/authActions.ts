@@ -48,8 +48,8 @@ const login: RequestHandler = async (req, res, next) => {
         res.status(403).json({ message: "Email et/ou mot de passe incorrect" });
       }
     } else {
-      // Si l'utilisateur n'est pas trouvé renvoie un statut 403
-      res.status(403).json({ message: "Email et/ou mot de passe incorrect" });
+      // Si l'utilisateur n'est pas trouvé renvoie un statut 404
+      res.status(404).json({ message: "Email et/ou mot de passe incorrect" });
     }
   } catch (err) {
     next(err);
@@ -100,8 +100,8 @@ const decodeToken: RequestHandler = async (req, res, next) => {
     // Décode le token JWT et renvoie le contenu
     const decoded = jwt.decode(authToken);
     res.json(decoded);
-    req.body.decoded = decoded
-    next()
+    req.body.decoded = decoded;
+    next();
   } catch (err) {
     next(err);
   }

@@ -83,7 +83,7 @@ if (rootElement == null) {
   throw new Error(`Your HTML Document should contain a <div id="root"></div>`);
 }
 
-// Render the app inside the root element
+// Faire un rendu de l'app dans l'élément racine
 createRoot(rootElement).render(
   <IsAuthenticatedProvider>
     <StrictMode>

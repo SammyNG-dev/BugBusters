@@ -17,7 +17,7 @@ const classPlayers: Player[] = [
 
 const RankingPage: FC = () => {
   return (
-    <div>
+    <section>
       <h1 id="title-rank">Classement des meilleurs joueurs</h1>
       <ul id="ranking">
         {classPlayers.map((player, index) => (
@@ -27,7 +27,7 @@ const RankingPage: FC = () => {
           </li>
         ))}
       </ul>
-    </div>
+    </section>
   );
 };
 

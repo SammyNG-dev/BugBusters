@@ -21,7 +21,12 @@ const app = express();
 import cors from "cors";
 
 if (process.env.CLIENT_URL != null) {
-  app.use(cors({ origin: [process.env.CLIENT_URL], credentials: true }));
+  app.use(
+    cors({
+      origin: [process.env.CLIENT_URL, "http://192.168.1.158:3000"],
+      credentials: true,
+    }),
+  );
 }
 
 // Si vous avez besoin d'autoriser des origines supplémentaires, vous pouvez ajouter quelque chose comme ceci :

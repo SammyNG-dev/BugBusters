@@ -57,7 +57,7 @@ const getFavorites: RequestHandler = async (req, res, next) => {
 const addFavorite: RequestHandler = async (req, res, next) => {
   try {
     const newFavorite = {
-      gameId: req.body.id,
+      gameId: req.body.gameId,
       userId: req.body.userId,
     };
     const affectedRows =

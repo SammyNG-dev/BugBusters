@@ -34,7 +34,7 @@ values
 
 insert into videogame (title, img, gender, editor, descrip)
 values
-("Pac-man", "pac-man-logo.png", "Action", "Namco", "Pac-Man est l'un des jeux d'arcade les plus emblématiques de tous les temps. Le joueur contrôle Pac-Man, un personnage jaune circulaire, qui doit manger des pastilles dans un labyrinthe tout en évitant les fantômes. Des fruits et des pastilles spéciales permettent de rendre Pac-Man temporairement invincible pour manger les fantômes. Le jeu est connu pour son gameplay addictif et son design iconique."),
+("Pac-man", "Pac-man-logo.png", "Action", "Namco", "Pac-Man est un jeu d’arcade classique sorti en 1980, où le joueur contrôle un personnage jaune qui parcourt un labyrinthe pour manger toutes les pastilles, tout en évitant des fantômes ennemis."),
 ("Space Invaders", "Space_Invaders_Logo.png", "Arcade/Shoot'em up", "Atari/Taito Corporation/Midway Games", "Space Invaders est un shoot'em up fixe développé par Taito en 1978. Conçu par Tomohiro Nishikado, il est considéré comme le premier archétype du genre et l'un des jeux vidéo les plus influents de l'histoire."),
 ("Donkey kong", "Donkey_Kong_Logo.png", "Action/Plateforme", "Nintendo", "Donkey Kong marque l'une des premières apparitions de Mario (appelé Jumpman) et de Donkey Kong. Le joueur doit escalader des niveaux tout en évitant des tonneaux lancés par Donkey Kong pour sauver la princesse Pauline."),
 ("street fighter", "street-fighter-II.png", "Combat", "Capcom", "Street Fighter II est un pilier du genre des jeux de combat, connu pour ses personnages emblématiques comme Ryu, Chun-Li, et Guile. Il a introduit des combats fluides, des coups spéciaux et une profonde stratégie dans le gameplay compétitif."),

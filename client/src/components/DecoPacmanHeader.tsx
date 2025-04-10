@@ -1,8 +1,18 @@
 import { useEffect, useRef } from "react";
 import "../components/DecoPacman.css";
 
+// Fonction pour générer un UUID v4 compatible
+function generateUUID() {
+  let dt = new Date().getTime();
+  const uuid = "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, (c) => {
+    const r = ((dt + crypto.getRandomValues(new Uint8Array(1))[0]) % 16) | 0;
+    dt = Math.floor(dt / 16);
+    return (c === "x" ? r : (r & 0x3) | 0x8).toString(16);
+  });
+  return uuid;
+}
+
 function DecoPacmanHeader() {
-  // Ref pour l'élément pacman et les dots, en utilisant le type correct HTMLDivElement
   const pacmanRef = useRef<HTMLDivElement | null>(null);
   const dotElementsRef = useRef<HTMLDivElement | null>(null);
 
@@ -29,13 +39,12 @@ function DecoPacmanHeader() {
       }
     };
 
-    // Lancer la vérification de collision avec une animation fluide
+    // Animation fluide : vérifie la collision à chaque frame
     const animate = () => {
       checkCollision();
-      requestAnimationFrame(animate); // Continuer l'animation de manière fluide
+      requestAnimationFrame(animate);
     };
 
-    // Commencer l'animation immédiatement
     animate();
 
     const resetDots = () => {
@@ -46,26 +55,22 @@ function DecoPacmanHeader() {
 
     pacman.addEventListener("animationiteration", resetDots);
 
-    // Nettoyer après que le composant est démonté
     return () => {
       pacman.removeEventListener("animationiteration", resetDots);
     };
-  }, []); // Effet déclenché une seule fois lors du montage du composant
+  }, []);
 
   return (
     <div className="header-content-pacman">
       <div className="header">
-        <div
-          ref={pacmanRef} // Pacman ref avec le bon type HTMLDivElement
-          className="header-pacman"
-        >
+        <div ref={pacmanRef} className="header-pacman">
           <img src="/public/assets/images/Pacman.png" alt="Pac-Man" />
         </div>
 
         <div ref={dotElementsRef}>
           {[...Array(50)].map((_, index) => (
             <div
-              key={crypto.randomUUID()}
+              key={generateUUID()}
               className="header-dot"
               style={{ "--dot-index": index + 1 } as React.CSSProperties}
             />

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import UserForm from "../components/UserForm";
-import "../pages/userPage.css";
+import "./UserPage.css";
 import { useNavigate, useParams } from "react-router-dom";
 import AddImageForm from "../components/AddImageForm";
 const API_URL = import.meta.env.VITE_API_URL;

@@ -30,7 +30,7 @@ ul#ranking {
 @media screen and (min-width: 768px) {
   #ranking {
     font-size: 18px;
-    width: 1000px;
+    width: 75%;
     margin: 0 auto;
   }
 

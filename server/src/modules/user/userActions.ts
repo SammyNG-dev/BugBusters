@@ -90,6 +90,7 @@ const checkPassword: RequestHandler = (req, res, next) => {
     const { password, confirmPassword } = req.body;
 
     if (password === confirmPassword) {
+      // Oubli de la confirmation du mot de passe
       req.body.confirmPassword = undefined;
       next();
     } else {

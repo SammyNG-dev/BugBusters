@@ -1,6 +1,6 @@
 import { animated } from "@react-spring/web";
 import { useEffect, useRef, useState } from "react";
-import "../pages/GameListingPage.css";
+import "./GameListingPage.css";
 import { Link, useNavigate } from "react-router-dom";
 import { useIsAuthenticatedContext } from "../contexts/IsAuthenticatedContext";
 
@@ -113,17 +113,22 @@ function Gamelisting() {
                     {isAdmin ? (
                       <button
                         type="button"
+                        className="delete-game"
                         onClick={() => {
                           fetch(`${API_URL}/api/videogames/${game.id}`, {
-                            // credentials: "include",
+                            credentials: "include",
                             method: "delete",
                           })
                             .then((res) => {
                               if (res.status === 200) {
-                                res.json();
-                              } else {
+                                setGamesListing(
+                                  gamesListing.filter((gameItem) => {
+                                    game.id !== gameItem.id;
+                                  }),
+                                );
                                 return res.json();
                               }
+                              return res.json();
                             })
                             .then((data) => {
                               if (data.message) {
@@ -137,6 +142,7 @@ function Gamelisting() {
                     ) : null}
                     <button
                       type="button"
+                      className="addition-game"
                       onClick={() => {
                         fetch(`${API_URL}/api/videogames/add-favs/`, {
                           credentials: "include",
@@ -144,7 +150,7 @@ function Gamelisting() {
                           headers: {
                             "Content-Type": "application/json",
                           },
-                          body: JSON.stringify({ userId, id: game.id }),
+                          body: JSON.stringify({ userId, gameId: game.id }),
                         })
                           .then((res) => {
                             if (res.status === 201) {
