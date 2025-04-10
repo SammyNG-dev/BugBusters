@@ -126,6 +126,7 @@ function Gamelisting() {
                                     game.id !== gameItem.id;
                                   }),
                                 );
+                                navigate("/gamelisting");
                                 return res.json();
                               }
                               return res.json();
