@@ -157,7 +157,6 @@ function Gamelisting() {
                             if (res.status === 201) {
                               return res.json();
                             }
-                            navigate("/gamelisting");
                             return res.json();
                           })
                           .then((data) => {

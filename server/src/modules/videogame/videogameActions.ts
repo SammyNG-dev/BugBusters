@@ -81,7 +81,7 @@ const deleteFavoriteGame: RequestHandler = async (req, res, next) => {
     const result = await videogameRepository.destroyFavoriteGame(gameId);
 
     if (result) {
-      res.status(202).json({ message: "Jeu retiré des favoris !" });
+      res.status(200).json({ message: "Jeu retiré des favoris !" });
     } else {
       res.status(403).json({ message: "Une erreur est survenue" });
     }

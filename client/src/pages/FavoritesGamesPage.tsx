@@ -65,7 +65,7 @@ function FavoritesGamesPage() {
                   },
                 )
                   .then((res) => {
-                    if (res.status === 202) {
+                    if (res.status === 200) {
                       setFavoritesGames(
                         favoritesGames.filter(
                           (game) => favoriteGame.id !== game.id,
